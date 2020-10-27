@@ -18,6 +18,20 @@ The system can classify `14` static and `3` dynamic hand gestures in real-time.
 - <a href="Datasets/ASL Alphabet/">ASL Alphabet</a> [Under development]
 - <a href="Datasets/ASL Words/">ASL Words</a> [Under development]
 
+### Dependencies
+
+#### Python 3.5
+- Numpy
+- Pandas
+- Pyserial
+- Matplotlib
+- Scikit-Learn
+- Jupyter Notebook
+
+#### ESP-32
+- <a href="ContinuousDataAcquisitionESP32/Dependencies/I2Cdevlib-Core_ID11/">I2Cdevlib-Core_ID11</a>
+- <a href="ContinuousDataAcquisitionESP32/Dependencies/I2Cdevlib-MPU6050_ID107/">I2Cdevlib-MPU6050_ID107</a> 
+
 ## Gestures
 
 <p align="center">
@@ -55,3 +69,7 @@ The graphs show the sensor data in real-time. During `Train` mode, the software 
     <img src="Figures/thumbnail.png" width="450"/>
   </a>
 </p>
+
+## License
+
+This work is licensed under [MIT License](Hand-Gesture-Recognition/LICENSE).
