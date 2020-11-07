@@ -4,7 +4,9 @@
      
 # Hand-Gesture-Recognition
 
-The system can classify `14` static and `3` dynamic hand gestures in real-time.
+The system can classify `14` static and `3` dynamic hand gestures in real-time. 
+
+<a href="https://github.com/farhanfuadabir/Hand-Gesture-Recognition/blob/main/Presentation_Report/4-2_report.pdf">Detailed Project Report</a>
 
 ### Developer
 
