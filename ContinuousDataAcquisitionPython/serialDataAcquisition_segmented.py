@@ -20,7 +20,7 @@ data = []
 recorditeration = 2
 segmentLength = 180
 gestureName = 'deaf'
-port = '/dev/ttyUSB1'
+port = '/dev/ttyUSB0'
 
 ser = serial.Serial(port=port,
                     baudrate=115200,
