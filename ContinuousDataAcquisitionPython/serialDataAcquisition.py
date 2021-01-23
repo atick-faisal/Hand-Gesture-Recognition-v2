@@ -16,7 +16,7 @@ columnName = ['flex_1', 'flex_2', 'flex_3', 'flex_4', 'flex_5',
 
 data = []
 
-filename = 'data_21062020/bla.csv'
+filename = 'bla.csv'
 port = '/dev/ttyUSB0'
 
 ser = serial.Serial(port=port,

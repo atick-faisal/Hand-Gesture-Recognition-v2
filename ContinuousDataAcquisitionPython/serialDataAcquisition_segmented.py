@@ -1,4 +1,5 @@
 import serial
+import datetime;
 from time import sleep, time
 import csv
 import pandas as pd
@@ -16,7 +17,9 @@ columnName = ['flex_1', 'flex_2', 'flex_3', 'flex_4', 'flex_5',
 
 data = []
 
-filename = 'data_21062020/deaf.csv'
+recorditeration = 2
+segmentLength = 180
+gestureName = 'deaf'
 port = '/dev/ttyUSB1'
 
 ser = serial.Serial(port=port,
@@ -35,16 +38,18 @@ ser.dtr = True
 
 count = 0
 recordData = True
-recorditeration = 40
-segmentLength = 180
 interruptToken = False
 
 print("Preparing Device... Please Wait")
 
+
 while True:
     try:
+        current_time = datetime.datetime.now()
         values = ser.readline().decode('utf-8').rstrip().split(',')
         values = list(map(float, values))
+        # values = list(current_time) + values
+
         if(recordData == True):
             interruptToken = False
             data.append(values)
@@ -56,19 +61,16 @@ while True:
                 interruptToken = True
                 count += 1
                 print('\tSegment - ', count, ' finished')
-
             if count > recorditeration:
                 df = pd.DataFrame(data,columns=columnName)
-                df.to_csv(filename, index=False)
+                df.to_csv(gestureName + '.csv', index=False)
                 print("\nData Writing Done... shape: ", df.shape)
                 break
 
 
     except(KeyboardInterrupt):
-
-        print("\n\nStart")
-
         if recordData == False:
+            print("\n\nStart")
             recordData = True
 
     except(ValueError):
