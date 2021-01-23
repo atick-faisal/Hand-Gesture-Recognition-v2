@@ -10,8 +10,8 @@ The system can classify `14` static and `3` dynamic hand gestures in real-time.
 
 ### Developer
 
-- Farhan Fuad Abir
 - Md. Ahasan Atick Faisal
+- Farhan Fuad Abir
 
 ### Datasets
 
